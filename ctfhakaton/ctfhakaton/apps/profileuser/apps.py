@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class ProfileuserConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'ctfhakaton.apps.profileuser'
+    name = 'profileuser'
+    verbose_name = "Профили пользователей"  # А здесь, имя которое необходимо отобразить в админке

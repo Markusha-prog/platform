@@ -39,7 +39,7 @@ class LoginUserForm(AuthenticationForm, forms.ModelForm):
     }
     class Meta:
         model = User
-        fields = ('username', 'password', 'captcha')
+        fields = ('username', 'password')
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field in self.fields:
