@@ -8,7 +8,7 @@ SECRET_KEY = 'djakngojfinsasstyuuad2;iosd134saa+easn24n7h)asdas2123!l4)2vaas_er4
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '192.168.8.100']
 
 DATABASES = {
     'default': {
@@ -16,3 +16,8 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(PROJECT_ROOT, 'static'),]
