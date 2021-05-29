@@ -3,7 +3,8 @@ from django.views.generic import CreateView
 from django.contrib.auth.models import User     #Импорт стандартной модели пользователя Django
 from django.contrib.auth.mixins import AccessMixin #Модуль для проверки авторизован ли пользователь или нет
 from .models import Profile
-from .forms import RegisterUserForm
+from django.contrib.auth.views import LoginView
+from .forms import RegisterUserForm, LoginUserForm
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth import authenticate, login
 
@@ -28,3 +29,12 @@ class RegisterUserView(UnLoginRequiredMixin, CreateView):
         aut_user = authenticate(username = username, password = my_password, email = email)
         login(self.request, aut_user)
         return form_valid
+
+
+class ProfileLoginView(UnLoginRequiredMixin, LoginView):
+    """ Авторизация пользователя """
+    template_name = 'profileuser/registration.html'
+    success_url = reverse_lazy('home')
+    form_class = LoginUserForm
+    def get_success_url(self):
+        return self.success_url

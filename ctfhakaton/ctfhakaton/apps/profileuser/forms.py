@@ -21,12 +21,17 @@ class RegisterUserForm(UserCreationForm, forms.ModelForm):
             self.fields['username'].widget.attrs.update({'placeholder': 'Логин*', 'class': 'form-control'})
             self.fields['username'].widget.attrs['maxlength'] = "20"
             self.fields['username'].help_text = ''
+            self.fields['username'].label = ''
             self.fields['email'].widget = forms.DateInput(attrs={'type': "email"})
-            self.fields['email'].widget.attrs.update({'placeholder': 'Почта*', 'class': 'form-control'})
+            self.fields['email'].widget.attrs.update({'placeholder': 'Почта*', 'class': 'form-control', 'name': 'email'})
+            self.fields['email'].label = False
+            self.fields['email'].help_text = ''
             self.fields['password1'].widget.attrs.update(
-                {'placeholder': 'Пароль*', 'class': 'form-control', "id": "password-input", "name": "password"})
-            self.fields['password2'].widget.attrs.update({'placeholder': 'Повторите пароль*', 'class': 'form-control'})
+                {'placeholder': 'Пароль*', 'class': 'form-control', "id": "password-input", "name": "pass"})
+            self.fields['password2'].widget.attrs.update({'placeholder': 'Повторите пароль*', 'name': 'repass', 'class': 'form-control'})
             self.fields['password1'].help_text = None
+            self.fields['password1'].label = False
+            self.fields['password2'].label = False
             self.fields['password2'].help_text = ''
 
 
@@ -44,5 +49,5 @@ class LoginUserForm(AuthenticationForm, forms.ModelForm):
         super().__init__(*args, **kwargs)
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'form-control'
-            self.fields['username'].widget.attrs.update({'placeholder' : 'Введите логин', 'class' : 'form-control'})
-            self.fields['password'].widget.attrs.update({'placeholder' : 'Введите пароль', 'class' : 'form-control', "id" : "password-input", "name" : "password" })
+            self.fields['username'].widget.attrs.update({'placeholder' : 'Введите логин', 'class' : 'form-control', 'name': 'email'})
+            self.fields['password'].widget.attrs.update({'placeholder' : 'Введите пароль', 'class' : 'form-control', "id" : "password-input", "name" : "pass" })
