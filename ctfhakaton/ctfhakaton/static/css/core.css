@@ -1,0 +1,471 @@
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+
+
+body{
+  background: linear-gradient( 0deg, black, rgba(0,0,0, 0.7));
+  background-color:#1D1B42;
+}
+.navbar{
+  background:transparent;
+  border:transparent;
+}
+
+.navbar .nav{ //controls line on navigation line
+  margin-left:15px;
+  margin-right:15px;
+  border-color:rgba(255,255,255,0.4);
+}
+
+#days {
+  font-size: 200px;
+  color: #db4844;
+}
+#hours {
+  font-size: 150px;
+  color: #f07c22;
+}
+#minutes {
+  font-size: 100px;
+  color: #f6da74;
+}
+#seconds {
+  font-size: 50px;
+  color: #abcd58;
+}
+
+div {
+  display: inline-block;
+  line-height: 1;
+  padding: 20px;
+  font-size: 40px;
+}
+
+span {
+  display: block;
+  font-size: 20px;
+  color: white;
+}
+
+body {
+  text-align: center;
+  font-family: 'Covered By Your Grace', cursive;
+  color: white;
+  background: #222;
+}
+
+
+
+/*.navbar .nav .active a{  //controls the active tab
+  background:rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0);
+}*/
+
+
+.navbar .nav li a { //sets navigation tile fonts, etc
+    color: rgba(161,0,129,1);//rgba(248,7,132,0.8);
+    margin-bottom:-23px;
+    font-size:17px;
+    //background-color: #CC3333;
+}
+
+.navbar .nav .move-right a:hover {
+    background:rgba(255,255,255,0.4);
+    border-color: rgba(255,255,255,0);
+}
+
+.nav-left-button{
+  //margin-left:15px;
+  margin-top:-21px;
+  opacity:0.4;
+  border-radius:0px;
+}
+
+.navbar .nav .nav-left-button a:hover{
+  background-color:transparent;
+  border-color:transparent;
+}
+.navbar .nav .nav-left-button a{
+  color:rgb(0,0,0);
+}
+
+.navbar .nav .move-right{
+  float:right;
+}
+/**** navigation bar end ******/
+
+/**** 'Home' page start*****/
+
+.home{
+  background: url(https://wallpapercave.com/wp/wp2757874.gif) no-repeat center center fixed;
+  height:auto;//850px;
+  padding:25px;
+}
+
+.title {
+  font-size:100px;
+  color: rgb(255, 255, 255);
+  margin-top:150px;
+
+}
+
+.quote {
+  font-family: serif;
+  font-style:italic;
+  color: rgb(255, 255, 255);
+  font-size:28px;
+}
+
+#Al {
+  font-family: serif;
+  font-size:27px;
+  color: rgb(255, 255, 255);
+}
+
+.row-quote{
+  margin-top:0px;
+  margin-bottom: -5px;
+}
+
+.row-social{
+  margin-top:50px;
+  //margin-bottom: 20px;
+}
+
+.btn-fcc{
+  color:rgb(255,255,255);
+  background:rgb(8,100,10);//#00691C;
+
+}
+
+.btn-fcc:hover{
+  color:rgb(255,255,255);
+  background:#004A14;
+}
+
+/*
+.btn-fcc:hover img{
+  opacity:0.1;
+}
+*/
+
+.btn-fcc:focus{
+  color:rgb(255,255,255);
+  background:#004A14;
+}
+
+.TopPhotoAttribute{
+  color:rgb(255,255,255);
+  margin-left:2px;
+  margin-top: 290px;
+}
+
+/**** 'Home' page end*****/
+
+/**** 'About' page start*****/
+.about{
+  background: url(https://arazitco.com/wp-content/uploads/2019/03/website-design.gif) center;
+    //'https://homehero-production.s3.amazonaws.com/article-assets/griffith-observatory.jpg');
+  height:auto;//855px;
+  padding:25px;
+  background-size: cover;
+}
+
+
+
+.SecondPhotoAttribute{
+  color:rgb(255,255,255);
+  margin-left:-2px;
+  margin-top: 768px;
+}
+
+/*
+.navbar .nav .move-right a:active {
+    background:rgba(255,255,255,0.4);
+    border-color: rgba(255,255,255,0);
+} */
+
+
+.portfolio{
+  background: white;
+  height:auto;//855px;
+  padding:25px;
+  background-size: cover;
+}
+
+.thumb{
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom:15px;
+  display:inline-block;
+}
+
+/*
+  .squares{
+  display:block;
+  padding-left:60px;
+  padding-right:60px;
+}
+*/
+
+.thumbnail {
+  width: 270px;
+  height: 215px;
+  background: rgba(240, 240, 0, 0);
+  border:0px;
+  font-family: 'Roboto', sans-serif;
+  color:#FFFFFF;
+  font-size: 16px;
+  font-weight:bold;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 0 20px 20px 0;
+  /*&:hover {*/
+  /*  color:#6DBDD6;//#DE1B1B;*/
+  /*  text-decoration: none;*/
+  /*}*/
+
+}
+
+.thumbnail img {
+  width: 130px;
+  padding-right:0;
+}
+
+.thumbnail p{
+  margin-top:2px;
+}
+
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+.pulse{
+  color: #ef6eae;
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+ button {
+	 color: #ef6eae;
+	 transition: 0.25s;
+}
+ button:hover, button:focus {
+	 border-color: #ef8f6e;
+	 color: #fff;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #ef8f6e; }
+}
+/*
+.thumbnail{
+  display:inline-block;
+  width:270px;
+  height:200px;
+  line-height:200px;
+  border-radius:10px;
+  margin-bottom:20px;
+  border:0;
+  margin-right:20px;
+}
+
+.thumbnail img{
+  display:inline-block;
+  width:270px;
+  height:200px;
+  line-height:200px;
+  border-radius:10px;
+  margin-bottom:20px;
+  border:0;
+  margin-right:20px;
+}
+
+.portfolioThumb{
+  color:#2F678C;
+  font-size: 16px;
+  font-weight:bold;
+
+}
+
+
+.quoteThumb{
+  color:#6fcb9f;
+  font-size: 16px;
+  font-weight:bold;
+}
+*/
+
+
+.timerThumb{
+  color:#E1F974;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.calculatorThumb{
+  color:#fb2e01;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.weatherThumb{
+  color:#D6015B;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.wikiThumb{
+  color:#FAAB1A;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.twitchThumb{
+  color:#FFFFFF;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.tictactoeThumb{
+  color:#E57F30;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.comingSoonThumb{
+  color:#2E0854;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+
+
+.ThirdPhotoAttribute{
+  color:rgb(255,255,255);
+  margin-left:-2px;
+  text-align:left;
+  //margin-top: 230px;
+}
+
+
+/**** 'Contact' page start*****/
+.contact{
+    background: url(https://wallpapercave.com/wp/wp2757874.gif) no-repeat center center fixed;
+  //'https://homehero-production.s3.amazonaws.com/article-assets/griffith-observatory.jpg');
+  height:auto;//855px;
+  padding:25px;
+  background-size: cover;
+}
+
+.LastPhotoAttribute{
+  color:rgb(255,255,255);
+  margin-left:-2px;
+  margin-top: 390px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* changing values based on screen width
+
+@media (max-width: 600px) {
+    // For mobile phones:
+    .navbar .nav .move-right{
+        width:30%;
+        font-size:23px;
+
+    }
+    .navbar .nav{
+        margin-right:-50px;
+        margin-top:-5px;
+        border-color:transparent;
+    }
+
+  .navbar .nav .move-right a:hover{
+    background:transparent;
+  }
+
+  .title{
+    margin-top:110px;
+    font-size:80px;
+  }
+
+  .quote{
+    font-size:25px;
+
+  }
+
+  #Al{
+    font-size:24px;
+    float:right;
+  }
+
+
+  [class*="col-"] {
+        display:block;
+        width: 100%;
+    }
+
+  .page-header{
+    width:80%;
+    margin-left:60px;
+  }
+
+
+  #HeadShot{
+    text-align:center;
+    float:none;
+    zoom:60%;
+    margin-top:45px;
+    margin-bottom: -20px;
+  }
+
+  .aboutMe .col-xs-12{
+    //margin-left:-40px;
+    //text-align:center;
+
+  }
+
+  .aboutMe .col-xs-12 h3{
+    font-size:16px;
+  }
+
+  .aboutMe .col-xs-12 h4{
+    margin-left:-20px;
+    font-size:16px;
+  }
+
+  .SecondPhotoAttribute{
+    margin-top:0;
+  }
+
+  .thumb{
+    zoom:35%;
+  }
+
+  .LastPhotoAttribute{
+    margin-top:300px;
+  }
+
+}
+*/
+

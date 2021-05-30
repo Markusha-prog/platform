@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Регистрация{% endblock %}
+
+{% block style %}
+    <link href='https://fonts.googleapis.com/css?family=Dosis|Abel' rel='stylesheet' type='text/css'>
+    <link href="{% static 'css/core.css' %}?v1" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="home container-fluid" id="homeID">
+    <div class="row">
+        <p style="text-align: center">
+            <img src="../../media/logo.png" style="width: 70%">
+        </p>
+    </div>
+    <div class="row">
+        <div id="timer">
+          <div id="days" style="font-size: 300px"></div>
+          <div id="hours" style="font-size: 250px"></div>
+          <div id="minutes" style="font-size: 200px"></div>
+          <div id="seconds" style="font-size: 150px"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Page 2 start-->
+
+<div class="about container-fluid" id="about-page">
+  <div class="aboutMe">
+    <div class="col-lg-9 col-md-10 col-xs-10">
+      <h3 style="color: #1D1B42; margin-top:55px; margin-left:10px; font-family:'Dosis'">
+          <strong>Spring Hackathon Cyber Garden</strong>
+          <br>
+          <h4 style="margin-left:10px; margin-bottom:15px;  color: #1D1B42; margin-top:-3px; font-weight: 400;font-family:'Dosis'">
+              В четырнадцатый раз мы собираем дизайнеров, разработчиков, аналитиков и всех неравнодушных к IT под главной пальмой Таганрога. <br></h4>
+          <h4 style="margin-left:10px; margin-bottom:15px; color:#1D1B42; margin-top:-3px;font-weight: 400;font-family:'Dosis'">
+              В четырнадцатый раз команды из Ростовской области и не только создадут IT-решения, чтобы побороться за призы конкурса и заявить о себе. Мы верим, что наш Зимний сад - это отличная площадка для старта сильных технологичных проектов.<br></h4>
+          </h3>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+</div>
+
+<!-- Page 3 start-->
+
+<div class="portfolio container-fluid text-center" id="portfolio-page">
+
+  <div>
+    <h2 style="margin-top:40px; margin-bottom:42px; color: #1D1B42">Партнёры:</h2>
+  </div>
+
+  <div class="squares">
+    <a href="https://www.freecodecamp.com/codingersk" class="thumbnail"><img src="https://cybergarden.ru/images/oggetto.png"></a>
+
+   <!-- <a href="https://s.codepen.io/codinger/full/BoWaEr"><span class="quoteThumb thumbnail" style="background-color:#fb2e01;">Random Quote Generator</span></a>
+    -->
+    <a href="https://s.codepen.io/codinger/full/BoWaEr" class="thumbnail"><img src="https://cybergarden.ru/images/mentalstack.png"></a>
+    <!--
+    <a href="https://s.codepen.io/codinger/full/dYZMjN"><span class="timerThumb thumbnail" style="background-color:#9166C7;">Pomodoro Timer</span></a>-->
+    <a href="https://s.codepen.io/codinger/full/dYZMjN" class="thumbnail"><img src="https://cybergarden.ru/images/centr-invest.png"></a>
+
+    <!--
+    <a href="https://s.codepen.io/codinger/full/meZjjJ"><span class="calculatorThumb thumbnail" style="background-color:#666547;">JavaScript Calculator</span></a>-->
+    <a href="https://s.codepen.io/codinger/full/meZjjJ" class="thumbnail"><img src="https://cybergarden.ru/images/DUNICE_logo_color.png"></a>
+
+   <!--
+    <a href="https://s.codepen.io/codinger/full/MKbGjr"><span class="weatherThumb thumbnail" style="background-color:#FB8301;">Weather App</span></a>-->
+    <a href="https://s.codepen.io/codinger/full/MKbGjr" class="thumbnail"><img src="https://cybergarden.ru/images/afterlogic-logo.png"></a>
+
+    <!--
+    <a href="https://s.codepen.io/codinger/full/adwErq"><span class="wikiThumb thumbnail" style="background-color:#109B8C;">Wikipedia Viewer</span></a>-->
+    <a href="https://s.codepen.io/codinger/full/adwErq" class="thumbnail"><img src="https://cybergarden.ru/images/intspirit.png"></a>
+    <!--
+    <a href="https://s.codepen.io/codinger/full/JGLEQZ"><span class="twitchThumb thumbnail" style="background-color:#694AD9;">Twitch.tv Channel Status</span></a>-->
+
+    <a href="https://s.codepen.io/codinger/full/JGLEQZ" class="thumbnail"><img src="https://cybergarden.ru/images/ITpremium.jpg"></a>
+    <!--
+    <a href="https://s.codepen.io/codinger/full/zqBymd"><span class="tictactoeThumb thumbnail" style="background-color:#74E069;">Tic Tac Toe</span></a>-->
+    <a href="https://s.codepen.io/codinger/full/zqBymd" class="thumbnail"><img src="https://cybergarden.ru/images/greenatom.png"></a>
+
+   <!--
+    <a href="#"><span class="comingSoonThumb thumbnail" style="background-color:#ffe28a;">Coming Soon</span></a>
+  </div>-->
+    <a href="https://codepen.io/codinger/full/XpJpoX/" class="thumbnail"><img src="https://cybergarden.ru/images/distillery_logo_small_colored.png"></a>
+</div>
+    </div>
+
+
+<!-- Page 4 start-->
+
+<div class="contact container-fluid" id="contact-page">
+
+  <div class="row" style="margin-top: 200px; height: 100%">
+    <div class="col-xs-1"></div>
+      <div class="col-xs-7">
+          <div class="buttons">
+              <p style="text-align: center"><button class="pulse">Зарегистрироваться</button></p>
+            </div>
+      </div>
+</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    function makeTimer() {
+
+			var endTime = new Date("April 26, 2013 17:00:00 PDT");
+			var endTime = (Date.parse(endTime)) / 1000;
+
+			var now = new Date();
+			var now = (Date.parse(now) / 1000);
+
+			var timeLeft = endTime - now;
+
+			var days = Math.floor(timeLeft / 86400);
+			var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+			var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+			var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+
+			if (hours < "10") { hours = "0" + hours; }
+			if (minutes < "10") { minutes = "0" + minutes; }
+			if (seconds < "10") { seconds = "0" + seconds; }
+
+			$("#days").html(days + "<span>Days</span>");
+			$("#hours").html(hours + "<span>Hours</span>");
+			$("#minutes").html(minutes + "<span>Minutes</span>");
+			$("#seconds").html(seconds + "<span>Seconds</span>");
+
+	}
+	document.addEventListener("DOMContentLoaded", function(){
+	    	setInterval(function() { makeTimer(); }, 1000);
+    });
+</script>
+{% endblock %}
