@@ -4,5 +4,6 @@ from .views import *
 urlpatterns = [
     # Регистрация
     path('list_hackathons/', FacultyView.as_view(), name='list_hackathons'),
-
+    path('qr_generate/', QrGenerate.as_view(), name='qr_generate'),
+    path('start_generate_qr/', start_generate_qr, name='start_generate_qr'),
 ]

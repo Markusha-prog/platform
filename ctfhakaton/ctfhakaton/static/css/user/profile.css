@@ -32,7 +32,9 @@ body, html {
     margin-bottom: 35px;
     border: none;
 }
-
+svg{
+    background-color: white;
+}
 .follower-wrapper li {
     list-style-type: none;
     color: #fff;

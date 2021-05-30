@@ -20,3 +20,13 @@ class Hackathon(models.Model):
     class Meta:
         verbose_name = 'Хакатон'
         verbose_name_plural = 'Хакатоны'
+
+
+class File_QR(models.Model):
+    """ Модель хакатона """
+    file = models.FileField(
+        models.FileField(verbose_name='Файл QR', max_length=254, upload_to='file_qr/%Y/%m/%d/', blank=True, null=True))
+
+    class Meta:
+        verbose_name = 'Файл QR'
+        verbose_name_plural = 'Файлы QR'

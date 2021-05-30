@@ -123,7 +123,6 @@ html, body {
     line-height: 70px;
     margin: 0 10px;
     color: #999;
-    overflow: hidden;
 }
 
 .nav-sch-hom {
@@ -411,3 +410,55 @@ html, body {
 }
 
 /*####################################################### END ################################################ */
+
+
+/* Используйте этот селектор для переопределения стиля линейного графика */
+.ct-series-a .ct-line {
+  /* Цвет линии серии */
+  stroke: #756de8;
+  /* Толщина линии */
+  stroke-width: 3px;
+  /* Пунктирная линия по шаблону */
+  stroke-dasharray: 20px 5px;
+}
+
+/* Этот селектор перкрывает стиль точек линейного графика */
+.ct-series-a .ct-point {
+  /* Цвет точек */
+  stroke: #130080;
+  /* Размер точек */
+  stroke-width: 7px;
+  /* Сделать точки квадратами */
+  stroke-linecap: round;
+    cursor: pointer;
+}
+
+.ct-series-a .ct-area {
+    fill: #4a02d7;
+}
+
+.ct-series-b .ct-line {
+  /* Цвет линии серии */
+  stroke: #9809b5;
+  /* Толщина линии */
+  stroke-width: 3px;
+  /* Пунктирная линия по шаблону */
+  stroke-dasharray: 20px 5px;
+}
+
+/* Этот селектор перкрывает стиль точек линейного графика */
+.ct-series-b .ct-point {
+  /* Цвет точек */
+  stroke: #69067d;
+  /* Размер точек */
+  stroke-width: 7px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0);
+  /* Сделать точки квадратами */
+  cursor: pointer;
+    stroke-linecap: round;
+}
+
+.ct-series-b .ct-area {
+    fill: #a438ba;
+}
