@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}Награждение балами команд{% endblock %}
+
+{% block style %}
+    <link href="{% static 'css/evaluation/evaluation.css' %}?v1" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css"/>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100 text-center justify-content-center">
+    <div class="row h-100 justify-content-center align-items-center text-center">
+        <div class="col-12">
+            <select id="select"" class="selectpicker" data-show-subtext="true" data-live-search="true">
+            {% for i in teams %}
+                <option class="val">{{ i.team_name }}</option>
+            {% endfor %}
+            </select>
+            <select class="form-select form-select-lg text-center mb-3 mt-3"
+                    aria-label=".form-select-lg example">
+                <option selected>Open this select menu</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button style="width: 220px;" id="js-button" class="btn btn-info">Наградить</button>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+{% block script %}
+
+
+
+
+    <script type="text/javascript">
+        $('#js-button').click(function () {
+            var value = $('#select option:selected').text();
+            $.ajax({
+                url: '{% url 'info_team' %}',
+                data: {
+                    'inputValue': value
+                },
+                dataType: 'json',
+                success: function (data) {
+                    $("#status").css("display", "block");
+                },
+            });
+
+        });
+
+
+    </script>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+{% endblock %}

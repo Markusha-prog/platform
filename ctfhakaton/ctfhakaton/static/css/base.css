@@ -1,0 +1,464 @@
+html, body {
+    height: 100%;
+}
+
+.container, .row.justify-content-center.align-items-center {
+    min-height: 100%;
+    max-height: 300%;
+}
+
+/*####################################################### NAV-BAR ################################################ */
+* {
+    box-sizing: border-box;
+    -webkit-transition: 0.3s cubic-bezier(0.75, 0, 0.2, 1), color 0.3s ease;
+    transition: 0.3s cubic-bezier(0.75, 0, 0.2, 1), color 0.3s ease;
+}
+
+.container-footer {
+    padding: 20px 0;
+}
+
+.rela-inline {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+}
+
+.nav-text {
+    font-family: IBMPlexSans-Text;
+    color: #999;
+}
+
+.floated {
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+.floated.right {
+    float: right;
+}
+
+.floated a {
+    color: #999;
+}
+
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 88%;
+}
+
+.horz-center {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.nav-bar {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1400px;
+}
+
+.nav-item {
+    display: none;
+}
+
+.nav-link {
+    padding: .2rem 1rem;
+}
+
+.nav-item-user a:hover {
+    color: #2ebaae;
+}
+
+.dropdown .show {
+    top: 100px;
+}
+
+.nav-item-user {
+    line-height: 55px;
+}
+
+.logo {
+    font-family: "Yellowtail";
+    font-size: 34px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    line-height: 70px;
+    margin: 0 30px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: #2ebaae;
+}
+
+.nav-item {
+    line-height: 55px;
+}
+
+.nav-div {
+    font-family: "Roboto";
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    line-height: 24px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 10px;
+    color: #999;
+}
+
+.nav-sch-hom {
+    font-family: "Roboto";
+    font-size: 17px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    line-height: 24px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 10px;
+    color: #999;
+}
+
+.nav-div li {
+    padding: 0 9px;
+    cursor: pointer;
+}
+
+.nav-div li:hover {
+    color: #2ebaae;
+}
+
+.nav-links {
+    margin: 0;
+    width: 640px;
+}
+
+.search-container {
+    padding-right: 15px;
+    margin-left: 0px;
+}
+
+.sign-div.active {
+    width: 0px;
+    opacity: 0;
+    -webkit-transition: 0.15s cubic-bezier(0.75, 0, 0.2, 1), width 0.3s 0.15s cubic-bezier(0.75, 0, 0.2, 1);
+    transition: 0.15s cubic-bezier(0.75, 0, 0.2, 1), width 0.3s 0.15s cubic-bezier(0.75, 0, 0.2, 1);
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin: 0 6px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-size: 30px !important;
+}
+
+.icon.search-icon {
+    background: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png") no-repeat;
+    background-position: 3px 3px;
+}
+
+.nav-search {
+    font-family: "Roboto";
+    font-size: 16px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    line-height: 20px;
+    border: none;
+    border-bottom: 1px solid #999;
+    width: 0px;
+}
+
+.nav-search:focus {
+    outline: none;
+}
+
+.nav-search.active {
+    width: 180px;
+    -webkit-transition: 0.3s cubic-bezier(0.75, 0, 0.2, 1), width 0.3s 0.15s cubic-bezier(0.75, 0, 0.2, 1);
+    transition: 0.3s cubic-bezier(0.75, 0, 0.2, 1), width 0.3s 0.15s cubic-bezier(0.75, 0, 0.2, 1);
+}
+
+.menu-card {
+    top: 72px;
+    left: 420px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    line-height: 20px;
+    z-index: 15;
+    height: 200px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0px 2px 18px -4px rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    -webkit-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+    pointer-events: none;
+}
+
+.nav-user-photo img {
+    object-fit: cover;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-size: auto 300px;
+}
+
+.menu-card.active {
+    box-shadow: 0px 5px 18px -3px rgba(0, 0, 0, 0.3);
+    -webkit-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s 0.25s ease;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s 0.25s ease;
+    pointer-events: auto;
+}
+
+.menu-background {
+    height: 0px;
+    width: 0px;
+    top: 5%;
+    left: 93%;
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.menu-background.active {
+    height: 540px;
+    width: 540px;
+    top: 50%;
+    left: 50%;
+    -webkit-transition: 0.3s cubic-bezier(0.5, 0, 0.2, 1), height 0.3s cubic-bezier(1, 0.15, 0.6, 1), width 0.3s cubic-bezier(1, 0.15, 0.6, 1);
+    transition: 0.3s cubic-bezier(0.5, 0, 0.2, 1), height 0.3s cubic-bezier(1, 0.15, 0.6, 1), width 0.3s cubic-bezier(1, 0.15, 0.6, 1);
+}
+
+.menu-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    opacity: 0;
+    -webkit-transition: 0.1s ease;
+    transition: 0.1s ease;
+}
+
+.menu-content.active {
+    opacity: 1;
+    -webkit-transition: 0.3s 0.3s ease;
+    transition: 0.3s 0.3s ease;
+}
+
+.menu-links {
+    overflow: hidden;
+    color: #999;
+}
+
+.menu-links li {
+    padding: 4px 10px;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.menu-links li:hover {
+    color: #2ebaae;
+}
+
+.menu-links.sub-nav-links {
+    height: 0px;
+}
+
+.menu-links.sign-links {
+    height: 0px;
+}
+
+.dropdown-menu a {
+    color: #999;
+}
+
+.dropdown-menu a:hover {
+    color: #2ebaae;
+    background-color: white;
+}
+
+.nav-item a:hover {
+    color: #2ebaae;
+}
+
+.auth {
+    display: none;
+}
+
+@media screen and (max-width: 1300px) {
+    .overlay-card {
+        max-width: 803px;
+        padding: 0;
+    }
+
+    .overlay-image {
+        height: 68%;
+        width: 100%;
+    }
+
+    .overlay-desc {
+        width: 100%;
+        height: 32%;
+        margin: 0;
+        padding: 20px 40px;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .nav-item {
+        line-height: 55px;
+        display: block;
+    }
+
+    .auth {
+        display: none;
+    }
+
+    .nav-links {
+        width: 0px;
+    }
+
+    .menu-background {
+        left: 8%;
+    }
+
+    .menu-card {
+        left: 2px;
+        height: 360px;
+    }
+
+    .menu-content .sub-nav-links {
+        height: 164px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .image {
+        width: calc(100% - 40px);
+        height: 0px;
+        padding-bottom: 60%;
+    }
+
+    .nav-item {
+        line-height: 55px;
+        display: block;
+    }
+
+    .user-none {
+        display: none;
+    }
+
+    .auth {
+        display: block;
+    }
+
+    .menu-content .sign-links {
+        height: 64px;
+        border-top: 1px solid #ccc;
+    }
+
+    .menu-card {
+        height: 425px;
+    }
+
+    .sign-div {
+        width: 0px;
+    }
+
+    .nav-search.active {
+        -webkit-transition: 0.3s cubic-bezier(0.75, 0, 0.2, 1);
+        transition: 0.3s cubic-bezier(0.75, 0, 0.2, 1);
+    }
+}
+
+@media screen and (max-width: 351px) {
+    .logo {
+        margin: 0 13px;
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 281px) {
+    .logo {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+}
+
+/*####################################################### END ################################################ */
+
+
+/* Используйте этот селектор для переопределения стиля линейного графика */
+.ct-series-a .ct-line {
+  /* Цвет линии серии */
+  stroke: #756de8;
+  /* Толщина линии */
+  stroke-width: 3px;
+  /* Пунктирная линия по шаблону */
+  stroke-dasharray: 20px 5px;
+}
+
+/* Этот селектор перкрывает стиль точек линейного графика */
+.ct-series-a .ct-point {
+  /* Цвет точек */
+  stroke: #130080;
+  /* Размер точек */
+  stroke-width: 7px;
+  /* Сделать точки квадратами */
+  stroke-linecap: round;
+    cursor: pointer;
+}
+
+.ct-series-a .ct-area {
+    fill: #4a02d7;
+}
+
+.ct-series-b .ct-line {
+  /* Цвет линии серии */
+  stroke: #9809b5;
+  /* Толщина линии */
+  stroke-width: 3px;
+  /* Пунктирная линия по шаблону */
+  stroke-dasharray: 20px 5px;
+}
+
+/* Этот селектор перкрывает стиль точек линейного графика */
+.ct-series-b .ct-point {
+  /* Цвет точек */
+  stroke: #69067d;
+  /* Размер точек */
+  stroke-width: 7px;
+    border-radius: 5px;
+    border: rgba(0, 0, 0, 0);
+  /* Сделать точки квадратами */
+  cursor: pointer;
+    stroke-linecap: round;
+}
+
+.ct-series-b .ct-area {
+    fill: #a438ba;
+}
